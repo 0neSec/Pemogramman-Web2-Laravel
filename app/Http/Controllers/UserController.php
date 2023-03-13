@@ -30,10 +30,17 @@ class UserController extends Controller
  public function update()
  {
     # code...
-    $users = User;
-    $users->name= "akhmad haikal";
-    $users->email= "akhmadhaikal@gmail.com";
-    $users->password= "";   
-    $users->save();
+    $user = User::find(1);
+ 
+    $user->name = 'Paris to London';
+     
+    $user->save();
  }
+ public function delete($id)
+ {
+    # code...Delete
+    $user = User::find($id);
+    $user->delete();
+ }
+ 
 }

@@ -18,10 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::prefix('user')->group(function () {
+        // Matches The "/admin/users" URL
+        // Route::get('/insert', [UserController::class, 'user']);
+        Route::get('/insert', [UserController::class, 'index']);
+        Route::get('/create', [UserController::class, 'store']);
+        Route::get('/update', [UserController::class, 'update']);
+        Route::get('/delete/{id}', [UserController::class, 'delete']);
+
+});
  
-Route::get('/greeting', [UserController::class, 'user']);
-route::prefix
-Route::get('/user', [UserController::class, 'index']);
-Route::get('/store', [UserController::class, 'store']);
+
 
 // Route::get('/greeting', [::class, ];
