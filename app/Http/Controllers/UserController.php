@@ -11,10 +11,23 @@ class UserController extends Controller
   public function index()
  {
     # code...
-    foreach (user::all() as $users) {
+    foreach (user::all() as $users)-> firs() {
         # code...
         echo $users->name.' | '.$users->email." ";
     }
+ }
+  public function first()
+ {
+    # code...
+    $user =User::Where('email', 'akhmadhaikal@gmail.com')-> first();
+    if($user) {
+      # code...
+      echo $user->name.' | '.$user->email;
+      }
+      else {
+         # code...
+         echo "User not found";
+         }
  }
 
  public function store()

@@ -23,12 +23,17 @@ Route::prefix('user')->group(function () {
         // Matches The "/admin/users" URL
         // Route::get('/insert', [UserController::class, 'user']);
         Route::get('/insert', [UserController::class, 'index']);
+        Route::get('/first', [UserController::class, 'first']);
         Route::get('/create', [UserController::class, 'store']);
         Route::get('/update', [UserController::class, 'update']);
         Route::get('/delete/{id}', [UserController::class, 'delete']);
 
 });
  
+
+#Wpu
+
+
 
 
 // Route::get('/greeting', [::class, ];
