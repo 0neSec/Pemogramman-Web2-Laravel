@@ -11,7 +11,7 @@ class UserController extends Controller
   public function index()
  {
     # code...
-    foreach (user::all() as $users)-> firs() {
+    foreach (user::all() as $users)-> {
         # code...
         echo $users->name.' | '.$users->email." ";
     }
